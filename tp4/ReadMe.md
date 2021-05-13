@@ -260,15 +260,11 @@ GRANT DEVSECOPS TO DEVSECOPS2;
 ```sql
 REVOKE TESTER FROM TESTER1;
 REVOKE TESTER FROM TESTER2;
-CREATE TABLE EMP(
-  id number primary key,
-  nom varchar2(20),
-  fonction varchar2(30));
 ```
 
  ```sql
-GRANT SELECT , UPDATE , ALTER , DELETE ON EMP to Tester1;
-GRANT SELECT , UPDATE , ALTER , DELETE ON EMP to Tester2;
+GRANT SELECT ON EMP to Tester1;
+GRANT SELECT ON EMP to Tester2;
 ```
  
  
