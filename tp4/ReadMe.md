@@ -157,7 +157,7 @@ ________________________________________________________________________________
 
       * [ username: dev1, password: dev1 ]
       * [ username: dev2, password: dev2 ]
-      d
+  
       B) Equipe Test :
 
       * [ username: tester1, password: tester1 ]
@@ -170,7 +170,13 @@ ________________________________________________________________________________
 
 
 ```sql
----
+connect system/manager;
+create user dev1 identified by dev1;
+create user dev2 identified by dev2;
+create user tester1 identified by tester1;
+create user tester2 identified by tester2;
+create user devsecops1 identified by devsecops1;
+create user devsecops2 identified by devsecops2;
 ```
   --->  **Une fois qu'un utilisateur est créé, le DBA peut octroyer des privilèges de système spécifiques à cet utilisateur.**
  
