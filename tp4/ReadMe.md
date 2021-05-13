@@ -157,7 +157,7 @@ ________________________________________________________________________________
 
       * [ username: dev1, password: dev1 ]
       * [ username: dev2, password: dev2 ]
-      
+      d
       B) Equipe Test :
 
       * [ username: tester1, password: tester1 ]
