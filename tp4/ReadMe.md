@@ -258,11 +258,17 @@ GRANT DEVSECOPS TO DEVSECOPS2;
   
 
 ```sql
----
+REVOKE TESTER FROM TESTER1;
+REVOKE TESTER FROM TESTER2;
+CREATE TABLE EMP(
+  id number primary key,
+  nom varchar2(20),
+  fonction varchar2(30));
 ```
 
  ```sql
----
+GRANT SELECT , UPDATE , ALTER , DELETE ON EMP to Tester1;
+GRANT SELECT , UPDATE , ALTER , DELETE ON EMP to Tester2;
 ```
  
  
@@ -271,7 +277,7 @@ GRANT DEVSECOPS TO DEVSECOPS2;
   
 
  ```sql
----
+GRANT SELECT ON EMP TO PUBLIC;
 ```
 
 **Retirer les privilèges attribuées aux admins, ainsi que les utilisateurs qui ont reçu leurs privilèges sur la table EMP par un membre de l'équipe devsecops:**
@@ -279,7 +285,9 @@ GRANT DEVSECOPS TO DEVSECOPS2;
  
  
 ```sql
----
+REVOKE DEVSECOPS FROM DEVSECOPS1;
+REVOKE DEVSECOPS FROM DEVSECOPS2;
+
 ```
 
 
