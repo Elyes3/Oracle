@@ -222,10 +222,16 @@ REVOKE CREATE PROCEDURE , CREATE VIEW , CREATE SEQUENCE , CREATE SESSION , CREAT
      C) Le rôle de l'équipe DevSecOps permet d'avoir tous les privilèges avec mode administrateur de la base:  
 
 ```sql
----
+CREATE ROLE dev ;
+GRANT CREATE PROCEDURE , CREATE VIEW , CREATE SEQUENCE , CREATE SESSION , CREATE ANY TABLE , SELECT ANY TABLE , UPDATE ANY TABLE, DROP ANY TABLE TO DEV;
+GRANT dev to dev1;
+GRANT dev to dev2;
 ```
 ```sql
----
+CREATE ROLE TESTER;
+GRANT CONNECT , GRANT CREATE SESSION , SELECT ANY TABLE to TESTER;
+GRANT TESTER to Tester1;
+GRANT TESTER to Tester2;
 ```
 ```sql
 ---
