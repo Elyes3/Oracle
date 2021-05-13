@@ -68,7 +68,7 @@ Pour supprimer un rôle : ```DROP ROLE role```
 
 ## Gestion des profils
 
-Un profile est un concept Oracle qui permet à l'administrateur d'une base de contrôler la consommation des ressources systèmes et des mots de passes.
+Un est un concept Oracle qui permet à l'administrateur d'une base de contrôler la consommation des ressources systèmes et des mots de passes.
 
 Pour créer un profil : ``` CREATE PROFILE profile LIMIT[ SESSIONS_PER_USER { integer | UNLIMITED | DEFAULT} ][ CPU_PER_SESSION { integer | UNLIMITED | DEFAULT } ][ CPU_PER_CALL { integer | UNLIMITED | DEFAULT } ][ CONNECT_TIME { integer | UNLIMITED | DEFAULT } ][ IDLE_TIME { integer | UNLIMITED | DEFAULT } ][LOGICAL_READS_PER_SESSION {integer | UNLIMITED|DEFAULT}][LOGICAL_READS_PER_CALL {integer | UNLIMITED|DEFAULT}][ COMPOSITE_LIMIT { integer | UNLIMITED | DEFAULT } ][PRIVATE_SGA {integer [K | M] | UNLIMITED | DEFAULT}]```
 avec : 
@@ -336,6 +336,6 @@ CREATE PROFILE PROFDEVSECOPS LIMIT SESSIONS_PER_USER UNLIMITED CPU_PER_SESSION U
 
   - **Attribuer à l'utilisateur "dev1", le profile qui lui correspond:** 
 ```sql
----
+ALTER user dev1 profile PROFDEV;
 ```
 
