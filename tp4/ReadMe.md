@@ -190,7 +190,7 @@ create user devsecops2 identified by devsecops2;
      * Création,lecture, modification de structure et suppression de tables.
 
 ```sql
----
+
 ```
 
 ¤   **Une fois qu'un utilisateur est créé, le DBA peut octroyer des privilèges de système spécifiques à cet utilisateur.**
